@@ -1,0 +1,673 @@
+<script type="text/javascript" src="app/booking-form/blockchain.js"></script>
+
+<div class=" card-header">
+
+  <div class="myFooter">
+    <h1 class="card-title">AC Service</h1>
+  </div>
+</div>
+<div class="card-body">
+  <div class="col-md-12">
+    <div class="container">
+      <!-- <div class="card" *ngIf="prizelist"> -->
+      <!--  -->
+      <div class="card-deck" *ngIf="prizelist">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="image">
+              <img src="/assets/window_ac_service.jpg" />
+            </div>
+            <div class="card-inner">
+              <div class="header">
+                <h3>{{serviceName}}</h3>
+              </div>
+
+              <div class="pull-right">
+                <button class="w3-button w3-xlarge w3-circle w3-teal" (click)="updateCount(-1)" [disabled]="!count">
+                  -</button>
+                {{count || 'Add'}}
+                <button  class="range-btn range-in" (click)="updateCount()"> +</button>
+              </div>
+              <p>Content area</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="image">
+              <img src="/assets/split_ac_service.jpg" />
+            </div>
+            <div class="card-inner">
+              <div class="header">
+                <h2>{{serviceName1}}</h2>
+                <h3>Sub-Head</h3>
+              </div>
+              <div class="content">
+                <div class="pull-right">
+                  <button (click)="updateCount1(-1)" [disabled]="!count1"> -</button>
+                  {{count1 || 'Add'}}
+                  <button (click)="updateCount1()"> +</button>
+                </div>
+                <p>Content area</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="image">
+              <img src="/assets/ac.jpg" />
+            </div>
+            <div class="card-inner">
+              <div class="header">
+                <h3>{{serviceName2}}</h3>
+              </div>
+              <div class="content">
+                <div class="pull-right">
+                  <button (click)="updateCount2(-1)" [disabled]="!count2"> -</button>
+                  {{count2 || 'Add'}}
+                  <button (click)="updateCount2()"> +</button>
+                </div>
+                <p>Content area</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="image">
+              <img src="/assets/ac_not_starting.jpg" />
+            </div>
+            <div class="card-inner">
+              <div class="header">
+                <h2>{{serviceName3}}</h2>
+                <h3>Sub-Head</h3>
+              </div>
+              <div class="content">
+                <div class="pull-right">
+                  <button (click)="updateCount3(-1)" [disabled]="!count3"> -</button>
+                  {{count3 || 'Add'}}
+                  <button (click)="updateCount3()"> +</button>
+                </div>
+                <p>Content area</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="image">
+              <img src="/assets/window_ac_service.jpg" />
+            </div>
+            <div class="card-inner">
+              <div class="header">
+                <h2>{{serviceName4}}</h2>
+                <h3>Sub-Head</h3>
+              </div>
+              <div class="content">
+                <div class="pull-right">
+                  <button (click)="updateCount4(-1)" [disabled]="!count4"> -</button>
+                  {{count4 || 'Add'}}
+                  <button (click)="updateCount4()"> +</button>
+                </div>
+                <p>Content area</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="image">
+              <img src="/assets/water_leakege.jpg" />
+            </div>
+            <div class="card-inner">
+              <div class="header">
+                <h2>{{serviceName5}}</h2>
+                <h3>Sub-Head</h3>
+              </div>
+              <div class="content">
+                <div class="pull-right">
+                  <button (click)="updateCount5(-1)" [disabled]="!count5"> -</button>
+                  {{count5 || 'Add'}}
+                  <button (click)="updateCount5()"> +</button>
+                </div>
+                <p>Content area</p>
+              </div>
+            </div>
+            <!-- </div> -->
+          </div>
+        </div>
+
+        <!--  -->
+        <!-- <div class="card-header">
+          <h2>Ac Servie</h2>
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td colspan="2" class="text-center">
+                  <h4>{{serviceName}}</h4>
+                </td>
+                <td class="text-right"><i class="fa fa-rupee"></i> {{prize}}</td>
+                <td class="text-center">
+                  <button (click)="updateCount(-1)" [disabled]="!count"> -</button>
+                  {{count || 'Add'}}
+                  <button (click)="updateCount()"> +</button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" class="text-center">
+                  <h4>{{serviceName1}}</h4>
+                </td>
+                <td class="text-right"><i class="fa fa-rupee"></i> {{prize1}}</td>
+                <td class="text-center">
+                  <button (click)="updateCount1(-1)" [disabled]="!count1"> -</button>
+                  {{count1 || 'Add'}}
+                  <button (click)="updateCount1()"> +</button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" class="text-center">
+                  <h4><i class="fa fa-snowflake-o" aria-hidden="true"></i> {{serviceName2}}</h4>
+                </td>
+                <td class="text-right"><i class="fa fa-rupee"></i> {{prize2}}</td>
+                <td class="text-center">
+                  <button (click)="updateCount2(-1)" [disabled]="!count2"> -</button>
+                  {{count2 || 'Add'}}
+                  <button (click)="updateCount2()"> +</button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" class="text-center">
+                  <h4> <i class="fa fa-power-off" aria-hidden="true"></i> &nbsp; {{serviceName3}}</h4>
+                </td>
+                <td class="text-right"><i class="fa fa-rupee"></i> {{prize3}}</td>
+                <td class="text-center">
+                  <button (click)="updateCount3(-1)" [disabled]="!count3"> -</button>
+                  {{count3 || 'Add'}}
+                  <button (click)="updateCount3()"> +</button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" class="text-center">
+                  <h4><i class="fa fa-volume-up" aria-hidden="true"></i>&nbsp; &nbsp;{{serviceName4}}</h4>
+                </td>
+                <td class="text-right"><i class="fa fa-rupee"></i> {{prize4}}</td>
+                <td class="text-center">
+                  <button (click)="updateCount4(-1)" [disabled]="!count4"> -</button>
+                  {{count4 || 'Add'}}
+                  <button (click)="updateCount4()"> +</button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" class="text-center">
+                  <h4><i class="fa fa-tint"></i>{{serviceName5}}</h4>
+                </td>
+                <td class="text-right"><i class="fa fa-rupee"></i> {{prize5}}</td>
+                <td class="text-center">
+                  <button (click)="updateCount5(-1)" [disabled]="!count5"> -</button>
+                  {{count5 || 'Add'}}
+                  <button (click)="updateCount5()"> +</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>-->
+        <button type="button" (click)="finalvalue()" (click)="openModal(template)"> Confirm </button>
+      </div>
+    </div>
+  </div>
+  <form [formGroup]='bookingForm' class="needs-validation" (ngSubmit)="PostData(bookingForm)">
+    <div class="container">
+      <div class="card-deck" *ngIf="address_provider">
+
+        <!-- card for address -->
+        <div class="card colors">
+          <div class="card-body">
+            <div class="card-header col-md-12">
+              <i class=" fa fa-align-justify"></i> Personal Details
+            </div>
+            <br />
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Username</span>
+                </div>
+                <input type="text" class="form-control" formControlName="name" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fa fa-user"></i></span>
+                </div>
+                <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                  <div *ngIf="f.name.errors.required">UserName is required</div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class=" form-Group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><span class="input-group-text">Username</span></span>
+                        </div>
+                        <input type="text" formControlName="name" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                           <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                          </div>
+                        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                            <div *ngIf="f.name.errors.required">UserName is required</div>
+                        </div>
+                    </div> -->
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Date</span>
+                </div>
+                <input type="text" class="form-control" formControlName="date" #dp="bsDatepicker" bsDatepicker
+                  [bsConfig]="bsConfig" [minDate]="minDate" [ngClass]="{ 'is-invalid': submitted && f.date?.invalid }">
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                </div>
+                <div *ngIf="submitted && f.date?.errors" class="invalid-feedback">
+                  <div *ngIf="f.date?.errors?.required">Date is required</div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row form-Group">
+                        <label for="validationTooltip01">Date</label>
+                        <input class="form-control " #dp="bsDatepicker" placeholder="Date   " bsDatepicker
+                            [bsConfig]="bsConfig" [minDate]="minDate"
+                            [ngClass]="{ 'is-invalid': submitted && f.date.invalid }">
+                    </div>
+                    <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                        <div *ngIf="f.date.errors.required">Valid Mobile Number is required</div>
+                    </div>
+                    <br/> -->
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Mobile No</span>
+                </div>
+                <input type="text" class="form-control" formControlName='number' [pattern]="'[789][0-9]{9}'"
+                  [ngClass]="{ 'is-invalid': submitted && f.number.invalid }">
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                </div>
+                <div *ngIf="submitted && f.number.errors" class="invalid-feedback">
+                  <div *ngIf="f.number.errors.required">Valid Mobile Number is required</div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row form-Group">
+                        <label for="validationTooltip01">Mobile Number</label>
+                        <input type="number" class="form-control" formControlName='number'
+                            placeholder="Mobile Number" [pattern]="'[789][0-9]{9}'"
+                            [ngClass]="{ 'is-invalid': submitted && f.number.invalid }">
+                    </div>
+                    <div *ngIf="submitted && f.number.errors" class="invalid-feedback">
+                        <div *ngIf="f.number.errors.required">Valid Mobile Number is required</div>
+                    </div>
+
+                    <br /> -->
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Time</span>
+                </div>
+                <select formControlName="time" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                  <option>09:00 - 12:00</option>
+                  <option>12:01 - 02:00</option>
+                  <option>02:01 - 04:00</option>
+                  <option>04:01 - 06:00</option>
+                  <option>06:01 - 08:00</option>
+                </select>
+                <span class="input-group-text"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                <div *ngIf="submitted && f.time.errors" class="invalid-feedback">
+                  <div *ngIf="f.time.errors.required">Time is required</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="row form-Group">
+
+                        <label for="validationTooltip01">Select Time</label>
+                        <select formControlName="time" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                            <option>09:00 - 12:00</option>
+                            <option>12:01 - 02:00</option>
+                            <option>02:01 - 04:00</option>
+                            <option>04:01 - 06:00</option>
+                            <option>06:01 - 08:00</option>
+                        </select>
+                        <div *ngIf="submitted && f.time.errors" class="invalid-feedback">
+                            <div *ngIf="f.time.errors.required">Time is required</div>
+                        </div>
+                    </div>
+                    <br /> -->
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Address</span>
+                </div>
+                <input type="text" class="form-control" formControlName="addresss1"
+                  placeholder="House/Flate number , House Name"
+                  [ngClass]="{ 'is-invalid': submitted && f.addresss1.invalid }"
+                  [ngClass]="{ 'is-invalid': submitted && f.number.invalid }">
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                </div>
+                <div *ngIf="submitted && f.addresss1.errors" class="invalid-feedback">
+                  <div *ngIf="f.addresss1.errors.required">House/Flate number , House Name</div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row form-Group">
+                        <label for="validationTooltip01">Address</label>
+                        <input type="text" class="form-control" formControlName="addresss1"
+                            placeholder="House/Flate number , House Name"
+                            [ngClass]="{ 'is-invalid': submitted && f.addresss1.invalid }">
+                        <div *ngIf="submitted && f.addresss1.errors" class="invalid-feedback">
+                            <div *ngIf="f.addresss1.errors.required">House/Flate number , House Name</div>
+                        </div>
+                    </div>
+                    <br /> -->
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Landmark</span>
+                </div>
+                <input type="text" class="form-control" formControlName="landmark"
+                  [ngClass]="{ 'is-invalid': submitted && f.landmark?.invalid }" placeholder="Landmark">
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                </div>
+                <div *ngIf="submitted && f.landmark?.errors" class="invalid-feedback">
+                  <div *ngIf="f.landmark?.errors?.required">Landmark is required</div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row form-Group">
+                        <label for="validationTooltip01"></label>
+                        <input type="text" class="form-control" formControlName="addresss2"
+                            [ngClass]="{ 'is-invalid': submitted && f.addresss2.invalid }"
+                            placeholder="Landmark">
+                        <div *ngIf="submitted && f.addresss2.errors" class="invalid-feedback">
+                            <div *ngIf="f.addresss2.errors.required">Valid Mobile Number is required</div>
+                        </div>
+                    </div>
+                    <br /> -->
+
+
+            <div class="row">
+
+
+              <div class="form-group col-md-6">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">City</span>
+                  </div>
+                  <input type="text" class="form-control" formControlName="city" placeholder="City"
+                    [ngClass]="{ 'is-invalid': submitted && f.city?.errors }">
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                  </div>
+                  <div *ngIf="submitted && f.city?.errors" class="invalid-feedback">
+                    <div *ngIf="f.city?.errors?.required">city is required</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Pincode</span>
+                  </div>
+                  <input type="number" class="form-control" [pattern]="'[3][0-9]{5}'" formControlName="pincode"
+                    placeholder="Pin Code" [ngClass]="{ 'is-invalid': submitted && f.pincode.errors }">
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                  </div>
+                  <div *ngIf="submitted && f.pincode.errors" class="invalid-feedback">
+                    <div *ngIf="f.pincode.errors.required">Valid pincode is required</div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="form-Group col-md-4">
+                            <label for="validationTooltip01">State</label>
+                            <input type="text" class="form-control" formControlName="state" placeholder="State"
+                                [ngClass]="{ 'is-invalid': submitted && f.state.errors }">
+                            <div *ngIf="submitted && f.state.errors" class="invalid-feedback">
+                                <div *ngIf="f.state.errors.required">State is required</div>
+                            </div>
+                        </div>
+                        <div class="form-Group col-md-4">
+                            <label for="validationTooltip01">Pin Code</label>
+                            <input type="number" [pattern]="'[3][0-9]{5}'" class="form-control"
+                                formControlName="pincode" placeholder="Pin Code"
+                                [ngClass]="{ 'is-invalid': submitted && f.pincode.errors }">
+                            <div *ngIf="submitted && f.pincode.errors" class="invalid-feedback">
+                                <div *ngIf="f.pincode.errors.required">Valid pincode is required</div>
+                            </div>
+                        </div> -->
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input"
+                [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }" />&nbsp;&nbsp;&nbsp;
+              <label for="acceptTerms" class="form-check-label"> Accept Terms & Conditions</label>
+              <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is
+                required</div>
+            </div>
+            <div class="form-group form-actions ">
+              <div class="row">
+
+                <div class="col-md-6 text-center">
+                  <button type="submit" class="btn btn-sm btn-primary" (click)="onNext()">Proceed To Pay</button>
+                </div>
+                <div class="col-md-6 pull-left ">
+                  <button type="reset" class="btn btn-sm btn-primary" (click)="onReset()">Cancle</button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- <div class="row form-group">
+                        <button class="btn btn-primary col-md-6">Register</button>
+                        <button class="btn btn-secondary col-md-6" type="reset" (click)="onReset()">Cancel</button>
+                    </div> -->
+          </div>
+        </div>
+        <!-- card for provider list -->
+        <div class="card">
+          <div class="card-body">
+            <!-- <h2>Service Provider</h2> -->
+            <!-- <table class="table">
+
+                <tr *ngFor="let users of providers">
+                  <td>{{users.name}}</td>
+                  <td>{{users.age}}</td>
+                  <td>{{users.age}}</td>
+                  <td>{{user.email}}</td>
+                <td>{{user.password}}</td>
+                <td>{{user.address}}</td>
+                <td>{{user.address2}}</td>
+                <td>{{user.city}}</td>
+                <td>{{user.pincode}}</td>
+                </tr>
+              </table> -->
+            <div class="card-header col-md-12">
+              <i class=" fa fa-align-justify"></i> Provider List
+            </div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Providername</th>
+                    <th>Age</th>
+                    <th>Select</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let users of providers">
+                    <td>{{users.userName}}</td>
+                    <td>{{users.age}}</td>
+                    <td>
+                      <div (click)="deleteUser(users.id)">
+                        <input type="radio" name="providerid" autocomplete="off">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                  <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul> -->
+            </div>
+            <!-- <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+              </ngb-pagination> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <!-- card for payment  -->
+  <!-- <div class="container">
+
+    <div class="card" *ngIf="payment_display">
+      <div class="card-header">
+        <h2>Payment Details</h2>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-xs-12 col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <div class="row">
+                  <img class="img-responsive cc-img"
+                    src="http://www.prepbootstrap.com/Content/images/shared/misc/creditcardicons.png">
+                </div>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <label>CARD NUMBER</label>
+                      <div class="input-group">
+                        <input type="tel" class="form-control" placeholder="Valid Card Number" />
+                        <span class="input-group-addon"><span class="fa fa-credit-card"></span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-7 col-md-7">
+                    <div class="form-group">
+                      <label><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span>
+                        DATE</label>
+                      <input type="tel" class="form-control" placeholder="MM / YY" />
+                    </div>
+                  </div>
+                  <div class="col-xs-5 col-md-5 pull-right">
+                    <div class="form-group">
+                      <label>CV CODE</label>
+                      <input type="tel" class="form-control" placeholder="CVC" />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <label>CARD OWNER</label>
+                      <input type="text" class="form-control" placeholder="Card Owner Names" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <button class="btn btn-warning btn-lg btn-block" (click)="thanx()">Process
+                      payment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div> -->
+<!-- payment model -->
+<ng-template #template>
+  <div class="modal-header color">
+    <div class="col-md-12">
+      <div class="raw">
+        <h5><b>Service Name <span class="pull-right">No.</span></b></h5>
+      </div>
+    </div>
+  </div>
+  <div class="modal-body">
+
+    <div *ngIf="count">
+      <div class="col-md-12">
+        <div class="raw">
+          <h6>{{serviceName}} <span class="pull-right">{{count}}</span></h6>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="count1">
+      <div class="col-md-12">
+        <div class="raw">
+          <h6>{{serviceName1}} <span class="pull-right">{{count1}}</span></h6>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="count2">
+      <div class="col-md-12">
+        <div class="raw">
+          <h6>{{serviceName2}} <span class="pull-right">{{count2}}</span></h6>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="count3">
+      <div class="col-md-12">
+        <div class="raw">
+          <h6>{{serviceName3}} <span class="pull-right">{{count3}}</span></h6>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="count4">
+      <div class="col-md-12">
+        <div class="raw">
+          <h6>{{serviceName4}} <span class="pull-right">{{count4}}</span></h6>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="count5">
+      <div class="col-md-12">
+        <div class="raw">
+          <h6>{{serviceName5}} <span class="pull-right">{{count5}}</span></h6>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="raw">
+        <button class="btn btn-sm btn-primary pull-right" (click)="seeform()"
+          (click)="modalRef.hide()">{{total}}</button>
+      </div>
+    </div>
+  </div>
+
+</ng-template>

@@ -1,0 +1,104 @@
+.navbar{
+    margin: 0%;
+}
+.bakcolor{
+    //   background-image: linear-gradient(to right ,#0f3443 ,#34e89e );
+    background-color: white;
+}
+.font{
+    color: #f47629;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+}
+.font1{
+color: black;    
+font-family: 'Roboto', sans-serif;
+} 
+ .font1:hover{
+    color: #f47629;
+}
+ .nav>li>a:focus, .nav>li>a:hover{
+    background-color:  transparent;
+}
+.sticky {
+    
+    position: fixed;
+   
+    width: 100%;
+}
+li {
+    margin-bottom: 10px;
+}
+.font1::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width .3s;
+}
+
+.font1:hover::after {
+    width: 100%;
+}
+.navbar{
+    background: white;
+    position: fixed;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 13vh;
+    font-family: 'Poppins', sans-serif;
+    background: #111;
+}
+u1{
+    margin: 0;
+    padding: 0;
+   
+}
+.menu{
+    display: flex;
+}
+ul li{
+    position: relative;
+    list-style: none;
+    margin: 0 10px;
+}
+ul li a{
+    position: relative;
+    height: 40px;
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+ul li a span{
+    font-size:100%;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: 0.5s;
+    color: #f47629;
+}
+ul li a span:nth-child(1){
+    color: #fff;
+}
+ul li a span:nth-child(2){
+    color: #f47629;
+}
+ul li:hover a span:nth-child(1){
+    transform: translateY(-100%);
+}
+ul li:hover a span:nth-child(2){
+  transform: translateY(-100%);
+}
+h1 b,h2 b{
+    color: aliceblue;
+}

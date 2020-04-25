@@ -1,0 +1,51 @@
+<div class="container">
+    <div *ngFor="let user of userOrderDetail">
+        <div class="card">
+            <div class="card-header">
+                <div class="row sample-row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 gutter-margin-xs-sm gutter-margin-sm-md">
+                        <div class="inner"><b>Order Id:</b> {{user.id}}</div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3 gutter-margin-xs-sm gutter-margin-sm-md">
+                        <div class="inner">Provider Name: <b>{{user.providerName}}</b></div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3 gutter-margin-xs-sm gutter-margin-sm-md">
+                        <div class="inner">Total: <b><i class="fa fa-inr" aria-hidden="true"></i> {{user.total}} </b>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3 gutter-margin-xs-sm gutter-margin-sm-md">
+                        <div class="inner"><span class="pull-right"><b>OTP: </b>{{user.end_services_otp}}</span></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row sample-row">
+                <div class="col-xs-12 col-sm-6 col-md-6 gutter-margin-xs-sm gutter-margin-sm-md">
+                    <div class="col-12">Name: <b>{{user.name}}</b></div>
+                    <div class="col-12">Address: <b>{{user.addresss1}}</b></div>
+                    <div class="col-12">Date: <b>{{user.date}}</b></div>
+                    <div class="col-12">Time: <b>{{user.time}}</b></div>
+                </div>
+
+
+
+
+                <div class="col-xs-12 col-sm-6 col-md-6 gutter-margin-xs-sm gutter-margin-sm-md">
+                    <div class="col-12" *ngIf="user.window_ac_service>0">Window Ac Service:
+                        <b>{{user.window_ac_service}}</b></div>
+                    <div class="col-12" *ngIf="user.split_ac_service>0">Split Ac Service:
+                        <b>{{user.split_ac_service}}</b></div>
+                    <div class="col-12" *ngIf="user.less_no_cooling>0">Less/No Cooling: <b>{{user.less_no_cooling}}</b>
+                    </div>
+                    <div class="col-12" *ngIf="user.ac_not_starting>0">Ac Not Strating: <b>{{user.ac_not_starting}}</b>
+                    </div>
+                    <div class="col-12" *ngIf="user.noise_issue>0">Noise Issue: <b>{{user.noise_issue}}</b></div>
+                    <div class="col-12" *ngIf="user.water_leakege>0">Water Leakege: <b>{{user.water_leakege}}</b></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

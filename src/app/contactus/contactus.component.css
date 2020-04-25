@@ -1,0 +1,253 @@
+/* 
+.texts {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.backimmage{
+  
+background:  linear-gradient(
+      rgba(27, 25, 25, 0.45), 
+      rgba(3, 0, 0, 0.45)
+    ),url('/assets/building2.jpg');
+width: 100%;
+height: 500px;
+}
+.txtcolor{
+ color: blanchedalmond;
+ opacity: 1;
+}
+.intext{
+  width:100%;
+   font-family: Arial, Helvetica, sans-serif;
+  
+}
+.back{
+  background-color: black;
+  margin: 15px;
+  opacity: 0.95;
+}
+card{
+  opacity: 1;
+}
+.colors{
+  color: #fd8c00;
+}
+.colorse{
+   color: #fd8c00;
+font-size:60px;
+}
+.marg{
+  margin: 30px;
+}
+.marg1{
+  margin-top: 60px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+ @media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 1000px;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 650px;
+  }
+}
+
+.top-nav-collapse {
+  background-color: #3f51b5 !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #3f51b5 !important;
+  }
+}
+
+.rgba-gradient {
+  background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+  background: -webkit-gradient(linear, 45deg, from(rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%)));
+  background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+}
+
+
+
+.md-form label {
+  color: #ffffff;
+}
+
+h6 {
+  line-height: 1.7;
+}
+.backcolor{
+  background-color: black;
+    opacity: 0.8;
+} */
+
+
+.contact
+{
+	width: 100%;
+	padding-top: 115px;
+	padding-bottom: 115px;
+	background: #FFFFFF;
+}
+.contact_title
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 28px;
+	color: #181818;
+}
+.contact_text
+{
+	margin-top: 30px;
+}
+.contact_list
+{
+	margin-top: 52px;
+}
+.contact_list ul li:not(:last-child)
+{
+	margin-bottom: 36px;
+}
+.contact_list ul li > div:first-child
+{
+	width: 104px;
+	height: 34px;
+	background: #f47629;
+	font-family: 'Oswald', sans-serif;
+	color: #FFFFFF;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 34px;
+	border-radius: 10px;
+}
+.contact_list ul li > div:last-child
+{
+	font-size: 14px;
+	color: #88889d;
+	margin-top: 10px;
+	padding-left: 25px;
+}
+.contact_form_container
+{
+	width: 100%;
+	margin-top: 55px;
+}
+.contact_input
+{
+	width: 100%;
+	height: 53px;
+	background: #f2f5f6;
+	border: none;
+	outline: none;
+	padding-left: 20px;
+}
+.contact_textarea
+{
+	height: 163px;
+	padding-top: 12px;
+}
+.contact_input::-webkit-input-placeholder
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px !important;
+	font-weight: 400 !important;
+	color: #88889d !important;
+}
+.contact_input:-moz-placeholder
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px !important;
+	font-weight: 400 !important;
+	color: #88889d !important;
+}
+.contact_input::-moz-placeholder
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px !important;
+	font-weight: 400 !important;
+	color: #88889d !important;
+} 
+.contact_input:-ms-input-placeholder
+{ 
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px !important;
+	font-weight: 400 !important;
+	color: #88889d !important;
+}
+.contact_input::input-placeholder
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px !important;
+	font-weight: 400 !important;
+	color: #88889d !important;
+}
+.contact_form .input_border
+{
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 100%;
+	height: 2px;
+	background: #f47629;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.contact_button
+{
+	width: 161px;
+	height: 52px;
+	background: #f47629;
+	font-family: 'Oswald', sans-serif;
+	color: #FFFFFF;
+	font-size: 16px;
+	text-transform: uppercase;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	margin-top: 35px;
+}
+.contact_map
+{
+	width: 100%;
+	height: 692px;
+}
+.map
+{
+	width: 100%;
+	height: 100%;
+}
+.google_map
+{
+	width: 100%;
+	height: 100%;
+}
+.map_container
+{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#map
+{
+	width: 100%;
+	height: calc(100% + 30px);
+}

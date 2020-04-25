@@ -1,0 +1,111 @@
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="col-md-12 col-lg-12">
+                    <form [formGroup]='bookingForm' class="needs-validation" (ngSubmit)="PostData(bookingForm)">
+                        <br />
+                        <br />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>welcome to services</h2>
+                            </div>
+                        </div>
+                        <div class="row form-Group">
+                            <label for="validationTooltip01">Name</label>
+                            <input type="text" formControlName="name" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                <div *ngIf="f.name.errors.required">UserName is required</div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row form-Group">
+                            <label for="validationTooltip01">Mobile Number</label>
+                            <input type="number" class="form-control" formControlName='number'
+                                placeholder="Mobile Number" [pattern]="'/(6|7|8|9)\d{9}/'"
+                                [ngClass]="{ 'is-invalid': submitted && f.number.invalid }">
+                        </div>
+                        <div *ngIf="submitted && f.number.errors" class="invalid-feedback">
+                            <div *ngIf="f.number.errors.required">Valid Mobile Number is required</div>
+                        </div>
+                        <br/>
+                        
+                        <div class="row form-Group">
+                            <label for="validationTooltip01">Select Time</label>
+                            <select formControlName="time" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                                <option>09:00 Am - 11:00 Am </option>
+                                <option>11:00 Am - 01:00 Pm </option>
+                                <option>01:00 Pm - 03:00 Pm </option>
+                                <option>03:00 Pm - 05:00 Pm </option>
+                                <option>05:00 Pm - 07:00 Pm </option>
+                            </select>
+                            <div *ngIf="submitted && f.time.errors" class="invalid-feedback">
+                                <div *ngIf="f.time.errors.required">Time is required</div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row form-Group">
+                            <label for="validationTooltip01">Address Line 1</label>
+                            <input type="text" class="form-control" formControlName="addresss1"
+                                placeholder="House Noumber"
+                                [ngClass]="{ 'is-invalid': submitted && f.addresss1.invalid }">
+                            <div *ngIf="submitted && f.addresss1.errors" class="invalid-feedback">
+                                <div *ngIf="f.addresss1.errors.required">House/Flate number , House Name</div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row form-Group">
+                            <label for="validationTooltip01">Address Line 2</label>
+                            <input type="text" class="form-control" formControlName="addresss2"
+                                [ngClass]="{ 'is-invalid': submitted && f.addresss2.invalid }"
+                                placeholder="partment, studio, or floor">
+                            <div *ngIf="submitted && f.addresss2.errors" class="invalid-feedback">
+                                <div *ngIf="f.addresss2.errors.required">Valid Mobile Number is required</div>
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class="row">
+
+                            <div class="form-Group col-md-4">
+                                <label for="validationTooltip01">State</label>
+                                <input type="text" class="form-control" formControlName="state" placeholder="State"
+                                    [ngClass]="{ 'is-invalid': submitted && f.state.errors }">
+                                <div *ngIf="submitted && f.state.errors" class="invalid-feedback">
+                                    <div *ngIf="f.state.errors.required">State is required</div>
+                                </div>
+                            </div>
+                            <div class="form-Group col-md-4">
+                                <label for="validationTooltip01">Pin Code</label>
+                                <input type="number" [pattern]="'[3][0-9]{5}'" class="form-control"
+                                    formControlName="pincode" placeholder="Pin Code"
+                                    [ngClass]="{ 'is-invalid': submitted && f.pincode.errors }">
+                                <div *ngIf="submitted && f.pincode.errors" class="invalid-feedback">
+                                    <div *ngIf="f.pincode.errors.required">Valid pincode is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class="form-group form-check">
+                            <input type="checkbox" formControlName="acceptTerms" id="acceptTerms"
+                                class="form-check-input"
+                                [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }" />&nbsp;&nbsp;&nbsp;
+                            <label for="acceptTerms" class="form-check-label"> Accept T&C*</label>
+                            <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is
+                                required</div>
+                        </div>
+                        <br />
+                        <div class="row form-group">
+                            <button type="submit" class="btn btn-primary col-md-12"
+                                (click)="getWelcomeMessageWithParameter()" value="Post Data">Submit</button>
+                            <div class="container">
+                                <span>{{welcomeMessageFromService}}</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>          
+        </div>
+    </div> -->

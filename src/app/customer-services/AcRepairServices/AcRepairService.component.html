@@ -1,0 +1,79 @@
+<div class="modal-body">
+    <h2>Ac Servie</h2>
+    <table class="table">
+
+        <tbody>
+            <tr>
+                <td colspan="2" class="text-center">
+                    <h4>{{serviceName}}</h4>
+                </td>
+                <!-- (click)="updateCount(-1)" -->
+                <td class="text-right"><i class="fa fa-rupee"></i> {{prize}}</td>
+                <td class="text-center">
+                    <button (click)="updateCount(-1)" [disabled]="!count"> -</button>
+                    <!-- <button (click)="updateCount(-1)" *ngIf="show" [disabled]="!count"> #</button> -->
+                    {{count || 'Add'}}
+                    <button (click)="updateCount()"> +</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center">
+                    <h4>{{serviceName1}}</h4>
+                </td>
+                <td class="text-right"><i class="fa fa-rupee"></i> {{prize1}}</td>
+                <td class="text-center">
+                    <button (click)="updateCount1(-1)" [disabled]="!count1"> -</button>
+                    {{count1 || 'Add'}}
+                    <button (click)="updateCount1()"> +</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center">
+                    <h4><i class="fa fa-snowflake-o" aria-hidden="true"></i> {{serviceName2}}</h4>
+                </td>
+                <td class="text-right"><i class="fa fa-rupee"></i> {{prize2}}</td>
+                <td class="text-center">
+                    <button (click)="updateCount2(-1)" [disabled]="!count2"> -</button>
+                    {{count2 || 'Add'}}
+                    <button (click)="updateCount2()"> +</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center">
+                    <h4> <i class="fa fa-power-off" aria-hidden="true"></i> &nbsp; {{serviceName3}}</h4>
+                </td>
+                <td class="text-right"><i class="fa fa-rupee"></i> {{prize3}}</td>
+                <td class="text-center">
+                    <button (click)="updateCount3(-1)" [disabled]="!count3"> -</button>
+                    {{count3 || 'Add'}}
+                    <button (click)="updateCount3()"> +</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center">
+                    <h4><i class="fa fa-volume-up" aria-hidden="true"></i>&nbsp; &nbsp;{{serviceName4}}</h4>
+                </td>
+                <td class="text-right"><i class="fa fa-rupee"></i> {{prize4}}</td>
+                <td class="text-center">
+                    <button (click)="updateCount4(-1)" [disabled]="!count4"> -</button>
+                    {{count4 || 'Add'}}
+                    <button (click)="updateCount4()"> +</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center">
+                    <h4><i class="fa fa-tint"></i>{{serviceName5}}</h4>
+                </td>
+                <td class="text-right"><i class="fa fa-rupee"></i> {{prize5}}</td>
+                <td class="text-center">
+                    <button (click)="updateCount5(-1)" [disabled]="!count5"> -</button>
+                    {{count5 || 'Add'}}
+                    <button (click)="updateCount5()"> +</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" (click)="finalvalue()" (click)="ACModalRef.hide()"> Confirm </button>
+</div>

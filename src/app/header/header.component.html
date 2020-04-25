@@ -1,0 +1,59 @@
+<div class="bakcolor">
+    <nav class="navbar navbar-expand-md fixed-top navbar-light">
+        <div class="container">
+            <a class="" routerLink=""><img src="assets/Hey_Provider_LOGO.jpeg" height="60"></a>
+
+            <button class="navbar-toggler d-lg-none " type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end pull-right" id="collapsibleNavId">
+                <ul class="nav pull-right ">
+                    <li class="nav-item active ">
+                        <a class="nav-link active font1 cool-link" routerLink="home"><i class="fa fa-home"
+                                aria-hidden="true"></i> Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link font1" routerLink="#">FeedBack</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link font1" routerLink="/contactUs"><i class="fa fa-phone" aria-hidden="true"></i>
+                            Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font1" (click)="openModalWithComponent()" routerLink=""><i class="fa fa-cog"
+                                aria-hidden="true"></i>
+                            Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font1" routerLink="aboutUs"><i class="fa fa-book" aria-hidden="true"></i>
+                            AboutUs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font1" *ngIf="!this.loginService.isUserLoggedIn()" routerLink="login"><i
+                                class="fa fa-sign-in" aria-hidden="true"></i>
+                            Login</a>
+                    </li>
+                    <li class="nav-item dropdown  font1" *ngIf="this.loginService.isUserLoggedIn()">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>
+                            My Profile
+                        </a>
+                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item nav-link font1" routerLink="MyOrders">My Order</a>
+                            <a class="dropdown-item nav-link font1" routerLink="logout">Logout</a>
+                        </div>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link font1" *ngIf="this.loginService.isUserLoggedIn()" routerLink="logout"><i
+                                class="fa fa-sign-out" aria-hidden="true"></i>
+                            Logout</a>
+                    </li> -->
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</div>

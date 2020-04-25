@@ -1,0 +1,62 @@
+.feature{
+    margin: 100px 0;;
+}
+.feature img{
+    max-width: 77%;
+    cursor: pointer;
+}
+.feature h2{
+    margin-top: 30px;
+    font-weight: bold;
+    line-height: 50px;
+    font-family: 'Roboto', sans-serif;
+    color: #f47629;
+}
+.feature p{
+    margin-top: 25px;
+    margin-bottom: 50px;
+    color: #808080;
+    font-size: 16px;
+    line-height: 1.8125;
+    font-family: 'Roboto', sans-serif;
+}
+.feature a{
+    width: 170px;
+    padding: 15px 10px;
+    display: block;
+    background: #f47629;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 9px 9px 1px rgba(204,204,204,0.5);
+    font-family: 'Roboto', sans-serif;
+
+}
+.cont{
+    background-image:url("/assets/bg_trust.jpg") ;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: scroll;
+    background-size: cover;
+    // padding-right: 0px;
+    // padding-left: 0px;
+    width: 100%;
+}
+.font{
+    font-size: 16px;
+    line-height: 1.8125;
+    font-family: "Roboto", sans-serif;
+    color: #808080;
+    padding-bottom: 65px;
+}
+h2{
+    color:#f47629 ;
+   margin: 78px 0px;
+}
+.content_position{
+    justify-content: flex-end;
+}
+
